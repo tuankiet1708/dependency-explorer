@@ -28,6 +28,8 @@ const fetchPackageDependencies = (name) => (dispatch, getState) => new Promise((
       if (!isEmpty(packageInfo.dependencies)) {
         let promises = [];
 
+        merge(dependencies, packageInfo.dependencies || {});
+
         // fetch all given dependencies
         Object.keys(packageInfo.dependencies).map(dep => {
           promises.push(requestApiNoRedux(endpointGetPackageDependenciesInformation, {name: dep}));
@@ -42,6 +44,7 @@ const fetchPackageDependencies = (name) => (dispatch, getState) => new Promise((
 
         return resolve(dispatch({type: ACTION_CALL_API_STOP_LOADING_PACKAGE_DEPENDENCIES, payload: {result: dependencies}}));
       }
+
 
       resolve(dispatch({type: ACTION_CALL_API_STOP_LOADING_PACKAGE_DEPENDENCIES, payload: {result: []}}));
     },
