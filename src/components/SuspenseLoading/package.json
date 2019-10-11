@@ -1,0 +1,6 @@
+{
+  "name": "SuspenseLoading",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SuspenseLoading.js"
+}

@@ -1,0 +1,81 @@
+{
+  "name": "@leolovescoding/dependency-explorer",
+  "version": "1.0.0",
+  "description": "Dependency Explorer",
+  "author": "Kiet Tran",
+  "copyright": "Copyright 2019 Kiet Tran",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@material-ui/core": "^4.4.0",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/lab": "^4.0.0-alpha.25",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "clsx": "^1.0.4",
+    "core-js": "^3.1.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.8.3",
+    "react": "^16.9.0",
+    "react-app-polyfill": "^1.0.1",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-helmet": "^5.2.1",
+    "react-hot-loader": "^4.12.12",
+    "react-localize-redux": "^3.5.3",
+    "react-redux": "^7.1.1",
+    "react-router-config": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-test-renderer": "^16.8.6",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "redux-form": "^8.2.6",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "postbuild": "rimraf build/**/*.map",
+    "test": "react-scripts test",
+    "test:cov": "npm test -- --coverage --watchAll=false",
+    "test:debug": "react-scripts --inspect-brk test --runInBand",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 9",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/*index.js",
+      "!src/serviceWorker.js",
+      "!src/polyfill.js"
+    ]
+  },
+  "engines": {
+    "node": ">=8.10",
+    "npm": ">=6"
+  }
+}

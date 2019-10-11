@@ -1,0 +1,21 @@
+.MuiPaperContent-unavailable {
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 30%;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+  }
+
+  .text {
+    color: #BDBDBD;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
