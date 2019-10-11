@@ -68,7 +68,7 @@ function PackageOverview({requestApi, loading, list, location}) {
       {packageName && <Typography variant="h6" gutterBottom className={classes.subHeading}>
         {packageName}
       </Typography>}
-      {list.length ? <Typography variant="subtitle2" gutterBottom className={classes.totalResult}>
+      {(!loading && list.length) ? <Typography variant="subtitle2" gutterBottom className={classes.totalResult}>
         {`Found ${list.length} dependencies for "${packageName}"`}
       </Typography> : null}
     </Grid>
@@ -78,7 +78,7 @@ function PackageOverview({requestApi, loading, list, location}) {
       ? <Grid item xs={12}><SuspenseLoading/></Grid>
       : (list.length ? <PackagesList list={chunk(list, rowsPerPage)[page]}/> : <NoContent/>)
     }
-    {list.length ? <Grid item xs={12}>
+    {(!loading && list.length) ? <Grid item xs={12}>
       <Pagination
         count={list.length}
         rowsPerPage={rowsPerPage}
